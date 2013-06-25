@@ -1,0 +1,12 @@
+# tmp files
+*~
+*.swp
+
+# configuration generated files
+config.ninja
+target.ninja
+
+# build generated files
+.ninja_*
+tourney
+*.o

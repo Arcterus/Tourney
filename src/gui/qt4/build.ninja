@@ -1,0 +1,3 @@
+curdir = src/gui/qt4
+
+build $curdir/../gui.o: cxx $curdir/gui.cxx

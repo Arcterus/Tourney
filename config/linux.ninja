@@ -1,0 +1,17 @@
+include config.ninja
+
+cxxflags = $cflags -I/usr/include/qt4 -I/usr/local/include/qt4
+
+guirustflags = 
+guildflags = -lQtCore -lQtGui -lstdc++
+
+rule cxx
+   command = $cxx $cxxflags -c -o $out $in
+   description = CXX $out
+
+rule moc
+   command = moc -o $out $in
+   description = MOC $out
+
+subninja src/gui/qt4/build.ninja
+

@@ -1,0 +1,3 @@
+curdir = src
+
+build tourney: rustc $curdir/tourney.rs | $curdir/gui/gui.o

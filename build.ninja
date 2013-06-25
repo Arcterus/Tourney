@@ -1,0 +1,4 @@
+include rules.ninja
+
+subninja src/build.ninja
+

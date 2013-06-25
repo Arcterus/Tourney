@@ -1,0 +1,14 @@
+cflags = -O3
+
+include target.ninja
+
+rustflags = --opt-level 3 --target $target $guirustflags --link-args "$guildflags"
+
+rule cc
+   command = $cc $cflags -c -o $out $in
+   description = CC $out
+
+rule rustc
+   command = rustc $rustflags -o $out $in
+   description = RUSTC $out
+
